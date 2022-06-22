@@ -1,4 +1,4 @@
-# Matomo (formerly Piwik) - matomo.org мамото 2
+# Matomo (formerly Piwik) - matomo.org
 
 [![Latest Stable Version](https://poser.pugx.org/matomo/matomo/v/stable)](https://matomo.org/download/)
 [![Latest Unstable Version](https://poser.pugx.org/matomo/matomo/v/unstable)](https://builds.matomo.org/)
