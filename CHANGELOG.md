@@ -1,4 +1,4 @@
-# Matomo Platform Changelog итосрия
+# Matomo Platform Changelog история
 
 This is the Developer Changelog for Matomo platform developers. All changes in our HTTP API's, Plugins, Themes, SDKs, etc. are listed below.
 
