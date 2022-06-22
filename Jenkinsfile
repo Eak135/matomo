@@ -12,7 +12,6 @@ pipeline {
         stage('Test'){
             steps {
                 echo 'make check'
-                junit 'testReport.xml' 
             }
         }
         stage('Deploy') {
