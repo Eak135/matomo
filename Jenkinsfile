@@ -1,11 +1,24 @@
-pipeline {
-  agent any
-  stages {
-    // Извлекаем проект из Bitbucket 
-    stage('Checkout') { }
-    // Собираем проект. Получаем на выходе пакетный файл AUDIT_Import_ALL.ispac 
-    stage('Build') { }
-    // Загружаем архив с проектом на удаленный сервер. Деплоим его на MS SQL Server 
-    stage('Deploy') { }
-  }
+pipeline { 
+    agent any 
+    options {
+        skipStagesAfterUnstable()
+    }
+    stages {
+        stage('Build') { 
+            steps { 
+                sh 'make' 
+            }
+        }
+        stage('Test'){
+            steps {
+                sh 'make check'
+                junit 'reports/**/*.xml' 
+            }
+        }
+        stage('Deploy') {
+            steps {
+                sh 'make publish'
+            }
+        }
+    }
 }
