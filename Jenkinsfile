@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps { 
-                echo 'make' 
+                echo 'build' 
             }
         }
         stage('Run tests') {
