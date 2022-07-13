@@ -9,7 +9,7 @@ pipeline {
                 echo 'build' 
             }
         }
-        stage('Run tests') {
+        stage('Test') {
         steps {
            catchError {
               script {
