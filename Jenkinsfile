@@ -9,7 +9,7 @@ pipeline {
                 echo 'build' 
             }
         }
-        stage('Test') {
+        stage('Run tests') {
         steps {
            catchError {
               script {
@@ -22,11 +22,11 @@ pipeline {
         	     }
       	    }
          }
+		 }
         stage('Deploy') {
             steps {
                 echo 'make publish'
             }
         }
     }
-}
 }
