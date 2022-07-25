@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-        any
-    }
+    agent any
     stages {
         	stage ("Python Bandit Security Scan"){
 			    steps{
