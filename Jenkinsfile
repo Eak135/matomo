@@ -21,7 +21,6 @@ pipeline {
 		}
 	    stage ("Python Bandit Security Scan"){
 			    steps{
-				args '-v $HOME:/home/jenkins'
 				sh "docker run --rm --volume \$(pwd) secfigo/bandit:latest"
 			    }
 		    }
