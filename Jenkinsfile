@@ -1,8 +1,5 @@
 pipeline {
-	agent { 
-	any
-	args '-v $HOME:/home/jenkins'
-	}
+	agent any
     stages {
         	stage ("Git checkout"){
 			steps {
